@@ -94,7 +94,7 @@ export const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="py-24 px-4 relative bg-secondary/20">
+    <section id="contact" className="py-12 sm:py-16 md:py-20 lg:py-24 px-3 sm:px-4 relative bg-secondary/20">
       <div className="container mx-auto max-w-6xl">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -103,52 +103,53 @@ export const ContactSection = () => {
               GET IN TOUCH
             </span>
           </h2>
-          <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-4"></div>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-center sm:text-left">
+          <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
+          <p className="text-muted-foreground max-w-2xl mx-auto text-justify text-sm sm:text-base leading-relaxed mt-4">
             Have a project in mind or want to collaborate? Feel free to reach out.
             I'm always open to discussing new opportunities and ideas.
           </p>
         </div>
+        
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-start">
           {/* Left Side - Contact Information */}
-          <div className="space-y-8">
-            <div className="space-y-6">
-              <h3 className="text-3xl font-bold text-foreground mb-8">
+          <div className="space-y-6 sm:space-y-8">
+            <div className="space-y-4 sm:space-y-6">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-4 sm:mb-6 md:mb-8 text-center lg:text-left">
                 Let's Connect
               </h3>
               
               {/* Contact Information Cards */}
-              <div className="space-y-6">
+              <div className="space-y-4 sm:space-y-6">
                 {contactInfo.map((item, index) => (
                   <div
                     key={index}
-                    className="group bg-card/70 backdrop-blur-sm p-6 rounded-xl border border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5"
+                    className="group bg-card/70 backdrop-blur-sm p-4 sm:p-5 md:p-6 rounded-lg sm:rounded-xl border border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5"
                   >
-                    <div className="flex items-start gap-4">
-                      <div className="p-3 rounded-xl bg-primary/10 group-hover:bg-primary/15 transition-colors duration-300 mt-1">
-                        <item.icon className="h-6 w-6 text-primary" />
+                    <div className="flex items-start gap-3 sm:gap-4">
+                      <div className="p-2 sm:p-2.5 md:p-3 rounded-lg sm:rounded-xl bg-primary/10 group-hover:bg-primary/15 transition-colors duration-300 mt-0.5 sm:mt-1 flex-shrink-0">
+                        <item.icon className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 text-primary" />
                       </div>
-                      <div className="flex-1">
-                        <h4 className="font-semibold text-lg mb-2 text-left">{item.label}</h4>
+                      <div className="flex-1 min-w-0">
+                        <h4 className="font-semibold text-base sm:text-lg mb-1 sm:mb-2 text-left">{item.label}</h4>
                         <div className="flex items-center gap-2">
                           {item.href ? (
                             <a
                               href={item.href}
-                              className="text-muted-foreground hover:text-primary transition-colors duration-300 flex-1 text-left"
+                              className="text-muted-foreground hover:text-primary transition-colors duration-300 flex-1 text-left text-sm sm:text-base break-all sm:break-normal"
                             >
                               {item.value}
                             </a>
                           ) : (
-                            <p className="text-muted-foreground flex-1 text-left">{item.value}</p>
+                            <p className="text-muted-foreground flex-1 text-left text-sm sm:text-base">{item.value}</p>
                           )}
                           {item.copyable && (
                             <button
                               onClick={() => copyToClipboard(item.value, item.label)}
-                              className="p-2 rounded-lg bg-primary/10 hover:bg-primary/20 transition-all duration-300 hover:scale-105"
+                              className="p-1.5 sm:p-2 rounded-lg bg-primary/10 hover:bg-primary/20 transition-all duration-300 hover:scale-105 flex-shrink-0"
                               title={`Copy ${item.label}`}
                             >
-                              <Copy className="h-4 w-4 text-primary" />
+                              <Copy className="h-3 w-3 sm:h-4 sm:w-4 text-primary" />
                             </button>
                           )}
                         </div>
@@ -159,21 +160,21 @@ export const ContactSection = () => {
               </div>
 
               {/* Social Links */}
-              <div className="pt-8">
-                <h4 className="font-semibold text-xl mb-6 text-foreground text-left">
+              <div className="pt-6 sm:pt-8">
+                <h4 className="font-semibold text-lg sm:text-xl mb-4 sm:mb-6 text-foreground text-center lg:text-left">
                   Follow Me On Social Media
                 </h4>
-                <div className="flex gap-4">
+                <div className="flex gap-3 sm:gap-4 justify-center lg:justify-start flex-wrap">
                   {socialLinks.map((social, index) => (
                     <a
                       key={index}
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group p-3 rounded-xl bg-primary/10 hover:bg-primary/20 transition-all duration-300 hover:shadow-lg hover:shadow-primary/25 hover:scale-110"
+                      className="group p-2.5 sm:p-3 rounded-lg sm:rounded-xl bg-primary/10 hover:bg-primary/20 transition-all duration-300 hover:shadow-lg hover:shadow-primary/25 hover:scale-110"
                       aria-label={social.label}
                     >
-                      <social.icon className="h-6 w-6 text-primary group-hover:text-primary/80 transition-colors duration-300" />
+                      <social.icon className="h-5 w-5 sm:h-6 sm:w-6 text-primary group-hover:text-primary/80 transition-colors duration-300" />
                     </a>
                   ))}
                 </div>
@@ -183,18 +184,18 @@ export const ContactSection = () => {
           </div>
 
           {/* Right Side - Contact Form */}
-          <div className="space-y-8">
-            <div className="bg-card/70 backdrop-blur-sm p-8 rounded-xl border border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5">
-              <h3 className="text-3xl font-bold mb-6 text-foreground">
+          <div className="space-y-6 sm:space-y-8">
+            <div className="bg-card/70 backdrop-blur-sm p-4 sm:p-6 md:p-8 rounded-lg sm:rounded-xl border border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-6 text-foreground text-center lg:text-left">
                 Send a Message
               </h3>
 
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                   <div>
                     <label
                       htmlFor="name"
-                      className="block text-sm font-semibold mb-2 text-foreground"
+                      className="block text-xs sm:text-sm font-semibold mb-1.5 sm:mb-2 text-foreground"
                     >
                       Your Name *
                     </label>
@@ -203,7 +204,7 @@ export const ContactSection = () => {
                       id="name"
                       name="name"
                       required
-                      className="w-full px-4 py-3 rounded-xl border border-border bg-background/50 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300"
+                      className="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg sm:rounded-xl border border-border bg-background/50 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 text-sm sm:text-base"
                       placeholder="John Doe"
                     />
                   </div>
@@ -211,7 +212,7 @@ export const ContactSection = () => {
                   <div>
                     <label
                       htmlFor="email"
-                      className="block text-sm font-semibold mb-2 text-foreground"
+                      className="block text-xs sm:text-sm font-semibold mb-1.5 sm:mb-2 text-foreground"
                     >
                       Your Email *
                     </label>
@@ -220,7 +221,7 @@ export const ContactSection = () => {
                       id="email"
                       name="email"
                       required
-                      className="w-full px-4 py-3 rounded-xl border border-border bg-background/50 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300"
+                      className="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg sm:rounded-xl border border-border bg-background/50 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 text-sm sm:text-base"
                       placeholder="john.doe@gmail.com"
                     />
                   </div>
@@ -229,7 +230,7 @@ export const ContactSection = () => {
                 <div>
                   <label
                     htmlFor="subject"
-                    className="block text-sm font-semibold mb-2 text-foreground"
+                    className="block text-xs sm:text-sm font-semibold mb-1.5 sm:mb-2 text-foreground"
                   >
                     Subject
                   </label>
@@ -237,7 +238,7 @@ export const ContactSection = () => {
                     type="text"
                     id="subject"
                     name="subject"
-                    className="w-full px-4 py-3 rounded-xl border border-border bg-background/50 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300"
+                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg sm:rounded-xl border border-border bg-background/50 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 text-sm sm:text-base"
                     placeholder="Project Collaboration"
                   />
                 </div>
@@ -245,7 +246,7 @@ export const ContactSection = () => {
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-sm font-semibold mb-2 text-foreground"
+                    className="block text-xs sm:text-sm font-semibold mb-1.5 sm:mb-2 text-foreground"
                   >
                     Your Message *
                   </label>
@@ -253,8 +254,8 @@ export const ContactSection = () => {
                     id="message"
                     name="message"
                     required
-                    rows={6}
-                    className="w-full px-4 py-3 rounded-xl border border-border bg-background/50 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 resize-none"
+                    rows={5}
+                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg sm:rounded-xl border border-border bg-background/50 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 resize-none text-sm sm:text-base"
                     placeholder="Hello! I'd love to discuss a project with you..."
                   />
                 </div>
@@ -263,27 +264,27 @@ export const ContactSection = () => {
                   type="submit"
                   disabled={isSubmitting}
                   className={cn(
-                    "cosmic-button w-full flex items-center justify-center gap-2 py-4",
+                    "cosmic-button w-full flex items-center justify-center gap-2 py-3 sm:py-4 text-sm sm:text-base",
                     isSubmitting && "opacity-70 cursor-not-allowed"
                   )}
                 >
                   {isSubmitting ? (
                     <>
-                      <div className="animate-spin rounded-full h-4 w-4 border-2 border-current border-t-transparent"></div>
-                      Sending...
+                      <div className="animate-spin rounded-full h-3 w-3 sm:h-4 sm:w-4 border-2 border-current border-t-transparent"></div>
+                      <span className="text-sm sm:text-base">Sending...</span>
                     </>
                   ) : (
                     <>
-                      Send Message
-                      <Send size={16} />
+                      <span className="text-sm sm:text-base">Send Message</span>
+                      <Send className="h-3 w-3 sm:h-4 sm:w-4" />
                     </>
                   )}
                 </button>
               </form>
 
               {/* Additional Info */}
-              <div className="mt-6 pt-6 border-t border-border/30">
-                <p className="text-xs text-muted-foreground text-center">
+              <div className="mt-4 sm:mt-6 pt-4 sm:pt-6 border-t border-border/30">
+                <p className="text-xs sm:text-sm text-muted-foreground text-center leading-relaxed">
                   I typically respond within 24 hours. For urgent matters, 
                   feel free to call me directly.
                 </p>

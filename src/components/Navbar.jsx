@@ -2,6 +2,9 @@ import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { ThemeToggle } from "./ThemeToggle"; 
+import logoWhite from '/mm_white.svg'; 
+import logoBlack from '/mm_black.svg'; 
+
 
 const navItems = [
   { name: "HOME", href: "#hero" },
@@ -90,7 +93,7 @@ export const Navbar = () => {
           }}
         >
           <img 
-            src={!useDarkText ? "mm_white.svg" : "mm_black.svg"} 
+            src={!useDarkText ? logoWhite : logoBlack} 
             alt="Logo" 
             className="h-9 w-auto transition-all duration-300 filter drop-shadow-sm"
             style={{

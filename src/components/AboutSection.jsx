@@ -36,8 +36,8 @@ export const AboutSection = () => {
           <div className="space-y-8">
             {/* Description */}
             <div className="space-y-6">
-              <p className="text-center sm:text-left text-muted-foreground leading-relaxed">
-                Dedicated software developer and engineering student with experience building scalable applications and expertise in data-driven problem solving. I am skilled at writing clean, testable code, and I always focus on the full product lifecycle, from design to deployment and monitoring. I have optimized application performance to reduce latency by over 20%, and I continuously explore emerging technologies to deliver innovative and future-proof solutions.
+              <p className="text-justify sm:text-justify text-muted-foreground leading-relaxed">
+                Dedicated software developer and engineering student with experience building scalable applications and expertise in data-driven problem solving. I am skilled at writing clean, testable code, and I always focus on the full product lifecycle, from design to deployment and monitoring.
               </p>
             </div>
 

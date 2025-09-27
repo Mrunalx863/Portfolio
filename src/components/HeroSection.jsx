@@ -333,7 +333,7 @@ export const HeroSection = () => {
             
             {/* Name - Text Shadow and Animation */}
             <div className="relative">
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-normal relative overflow-hidden">
+              <h1 className="text-3xl md:text-5xl lg:text-7xl font-extrabold tracking-normal relative overflow-hidden">
                 
                 {/* "I'M" Text with slide-in animation */}
                 <div className={`inline-block transition-all duration-1000 ease-out ${
@@ -415,7 +415,7 @@ export const HeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-8 opacity-0 animate-fade-in-delay-3">
               <button 
                 onClick={() => handleNavigation('projects')} 
-                className="relative px-10 py-4 bg-white/10 backdrop-blur-md border-2 border-white/40 font-bold hover:bg-white/20 hover:border-white/60 transition-all duration-300 rounded-lg uppercase tracking-wider text-sm shadow-2xl hover:shadow-violet-500/20 cursor-pointer group overflow-hidden"
+                className="relative w-64 px-10 py-4 bg-white/10 backdrop-blur-md border-2 border-white/40 font-bold hover:bg-white/20 hover:border-white/60 transition-all duration-300 rounded-lg uppercase tracking-wider text-sm shadow-2xl hover:shadow-violet-500/20 cursor-pointer group overflow-hidden whitespace-nowrap"
                 style={{
                   boxShadow: '0 8px 32px rgba(255,255,255,0.1), inset 0 1px 0 rgba(255,255,255,0.2)'
                 }}
@@ -443,7 +443,7 @@ export const HeroSection = () => {
               
               <button 
                 onClick={downloadCV}
-                className="relative px-10 py-4 bg-white/10 backdrop-blur-md border-2 border-white/40 font-bold hover:bg-white/20 hover:border-white/60 transition-all duration-300 rounded-lg uppercase tracking-wider text-sm shadow-2xl hover:shadow-violet-500/20 cursor-pointer group overflow-hidden"
+                className="relative w-64 px-10 py-4 bg-white/10 backdrop-blur-md border-2 border-white/40 font-bold hover:bg-white/20 hover:border-white/60 transition-all duration-300 rounded-lg uppercase tracking-wider text-sm shadow-2xl hover:shadow-violet-500/20 cursor-pointer group overflow-hidden whitespace-nowrap"
                 style={{
                   boxShadow: '0 8px 32px rgba(255,255,255,0.1), inset 0 1px 0 rgba(255,255,255,0.2)'
                 }}
