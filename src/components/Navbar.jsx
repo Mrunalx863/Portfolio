@@ -90,7 +90,7 @@ export const Navbar = () => {
           }}
         >
           <img 
-            src={!useDarkText ? "/mm_white.svg" : "/mm_black.svg"} 
+            src={!useDarkText ? "mm_white.svg" : "mm_black.svg"} 
             alt="Logo" 
             className="h-9 w-auto transition-all duration-300 filter drop-shadow-sm"
             style={{
