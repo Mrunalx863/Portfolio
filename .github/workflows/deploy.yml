@@ -1,5 +1,5 @@
 # Workflow name displayed in the GitHub Actions tab
-name: Deploy static content to Pages
+name: Portfolio
 
 # Controls when the workflow will run
 on:
@@ -32,7 +32,7 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20 # Use a specific, supported Node.js version
+          node-version: 22 # Use a specific, supported Node.js version
           cache: 'npm' # Cache npm dependencies
 
       # Install dependencies
